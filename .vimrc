@@ -1,7 +1,16 @@
 syntax enable
 syntax on
 
-colorscheme evening
+set background=dark
+colo gruvbox
+map  :call ToggleBg()
+function! ToggleBg()
+	    if &background == 'dark'
+			set bg=light
+		 else
+			 set bg=dark
+		 endif
+endfunc
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
